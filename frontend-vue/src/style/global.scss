@@ -1,0 +1,197 @@
+/* ============================================================
+   电商用户流失预测 · 大屏数据可视化 —— 全局主题
+   风格：科技风大数据可视化大屏
+   主色：深蓝 + 青蓝（荧光蓝）；暗星空背景 + 粒子动效
+   ============================================================ */
+
+:root {
+  color-scheme: dark;
+
+  /* --- 页面背景 --- */
+  --bg-page: #040a18;                    /* 深空底色 */
+  --bg-nebula-1: rgba(30, 60, 160, 0.14); /* 蓝色星云 */
+  --bg-nebula-2: rgba(0, 200, 255, 0.08); /* 青色星云 */
+
+  /* --- 面板 / 表面 --- */
+  --surface: rgba(9, 22, 52, 0.62);
+  --surface-solid: #0a1736;
+  --surface-deep: #070f28;
+
+  /* --- 边框 / 发光 --- */
+  --border: rgba(0, 216, 255, 0.28);
+  --border-strong: rgba(0, 216, 255, 0.7);
+  --glow-cyan: 0 0 18px rgba(0, 216, 255, 0.45);
+  --glow-cyan-sm: 0 0 10px rgba(0, 216, 255, 0.35);
+
+  /* --- 文字 --- */
+  --ink-1: #e6f6ff;
+  --ink-2: #9fc6ec;
+  --ink-3: #5f7fa8;
+
+  /* --- 主色（荧光青 + 深蓝） --- */
+  --cyan: #00d8ff;
+  --cyan-dim: #00a2b5;
+  --blue: #3d7bff;
+  --blue-deep: #12315f;
+
+  /* --- 辅助分类色（已在暗色面板上验证可读） --- */
+  --cat-magenta: #c7548c;
+  --cat-amber: #c98200;
+  --cat-violet: #8f7ad9;
+  --cat-red: #cf3d4d;
+
+  /* --- 状态色（风险分级专用） --- */
+  --status-good: #00e676;
+  --status-warning: #ffb300;
+  --status-critical: #ff3d6e;
+
+  /* --- 顺序色阶（流失率由低到高：亮青 → 深蓝） --- */
+  --seq-0: #37f4ff;
+  --seq-1: #00d8ff;
+  --seq-2: #00b0e0;
+  --seq-3: #0088c6;
+  --seq-4: #0060a8;
+  --seq-5: #004088;
+
+  /* --- 发散（相关性：负=保护青，正=风险红，0=灰） --- */
+  --div-negative: #00d8ff;
+  --div-positive: #ff3d6e;
+  --div-zero: #3a4766;
+
+  --font-mono: "Consolas", "SF Mono", "Menlo", monospace;
+}
+
+/* ---------- 基础重置 ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: var(--bg-page);
+  color: var(--ink-1);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 数字使用等宽，保证大屏数值对齐 */
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 216, 255, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 216, 255, 0.45);
+}
+
+/* ---------- 关键帧动画 ---------- */
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.85;
+    transform: scale(1);
+    filter: drop-shadow(0 0 14px rgba(0, 216, 255, 0.35));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 30px rgba(0, 216, 255, 0.65));
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-rev {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    top: -8%;
+  }
+  100% {
+    top: 108%;
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes gauge-fill {
+  from {
+    stroke-dashoffset: var(--gauge-total);
+  }
+}

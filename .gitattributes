@@ -1,0 +1,19 @@
+# 统一换行符为 LF，避免跨平台 diff 混乱
+* text=auto
+
+*.py   text eol=lf
+*.js   text eol=lf
+*.vue  text eol=lf
+*.scss text eol=lf
+*.css  text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.svg  text eol=lf
+
+*.png binary
+*.jpg binary
+*.pth binary
+*.pkl binary

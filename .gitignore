@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.venv/
+uv.lock
+*.pth
+*.pkl
+*.png
+model_weight/
+result_img/
+data/churn_data.csv
+
+# 文档配图（大屏截图 / 损失曲线）需要入库
+!docs/images/
+!docs/images/*.png
+
+# Frontend
+frontend-vue/node_modules/
+frontend-vue/dist/
+frontend-vue/.vite/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
