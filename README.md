@@ -46,7 +46,7 @@ python backend/main.py
 cd frontend-vue && npm install && npm run dev
 ```
 
-> **注意**：`data/`、`model_weight/`、`result_img/` 已 git 忽略，全新克隆后需先执行第 2 步训练。
+> **注意**：`model_weight/`、`result_img/` 为训练产物（git 忽略，运行 `python core/train.py` 自动生成）；`data/churn_data.csv` 模拟数据集已随仓库提供，克隆后即可直接训练。
 
 ## 📸 效果预览
 
@@ -131,11 +131,11 @@ ecom_churn_web/
 ├── core/            # 🧠 离线训练（dataset / mlp_model / train）
 ├── backend/         # ⚡ FastAPI 推理 + 分析（main / analytics）
 ├── frontend-vue/    # 🎨 Vue3 大屏（Dashboard + 12 组件）
-├── data/            # 📊 原始数据集（git 忽略）
-├── model_weight/    # 📦 训练产物（git 忽略）
+├── data/            # 📊 模拟数据集（已随仓库提交）
+├── model_weight/    # 📦 训练产物（git 忽略，train.py 生成）
 ├── result_img/      # 📈 实验图表（git 忽略）
 ├── docs/            # 📄 全部项目文档
-└── README.md / pyproject.toml / .gitignore
+└── README.md / LICENSE / pyproject.toml / .gitignore
 ```
 
 ## 📈 模型表现
@@ -152,4 +152,10 @@ ecom_churn_web/
 
 ## 📄 开源许可
 
+[MIT](LICENSE) © 2026 Qingk
+
 本项目仅供学习演示。数据为模拟数据，模型指标不代表真实业务水平。
+
+---
+
+**作者：[Qingk](https://github.com/qingkongyanyu)**
