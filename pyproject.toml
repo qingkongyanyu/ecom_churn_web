@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "电商用户流失预测Web系统 - ANN-MLP + FastAPI + Vue3"
 readme = "README.md"
 requires-python = ">=3.10,<3.11"
+license = { text = "MIT" }
+authors = [{ name = "Qingk" }]
 dependencies = [
     "torch==2.5.1",
     "fastapi==0.115.6",
