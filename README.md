@@ -150,6 +150,20 @@ ecom_churn_web/
 
 **关键洞察**：沉睡用户（>30 天未下单）流失率 **92.2%**；55+ 年龄段流失率 **80%**；下单频次、消费金额、活跃度是强保护信号（|corr| > 0.6）。
 
+## 🔗 相关项目
+
+作者 [Qingk](https://github.com/qingkongyanyu) 的其它开源项目：
+
+- [enterprise_rag](https://github.com/qingkongyanyu/enterprise_rag) — 企业私有知识库 RAG 智能问答系统（混合检索 + 大模型）
+- [drink_rag_robot](https://github.com/qingkongyanyu/drink_rag_robot) — 饮料行业 RAG 知识问答机器人
+- [love-emotion-agent](https://github.com/qingkongyanyu/love-emotion-agent) — AI 情感对话智能体（大模型对话 + 语音合成）
+- [xiaowen_weather_agent](https://github.com/qingkongyanyu/xiaowen_weather_agent) — 智能天气助手 Agent
+- [xiaoyu_ai_full](https://github.com/qingkongyanyu/xiaoyu_ai_full) — AI 情感陪伴智能体（对话 / 语音 / 长期记忆 RAG）
+- [business-district-selection](https://github.com/qingkongyanyu/business-district-selection) — 城市商圈选址与客流异常检测平台
+- [wine-quality-prediction](https://github.com/qingkongyanyu/wine-quality-prediction) — 葡萄酒品质预测与理化指标分析
+- [enterprise-credit-risk](https://github.com/qingkongyanyu/enterprise-credit-risk) — 企业信用风险评级系统
+- [ecommerce-repurchase-prediction](https://github.com/qingkongyanyu/ecommerce-repurchase-prediction) — 电商复购预测（PCA + 因子分析建模）
+
 ## 📄 开源许可
 
 [MIT](LICENSE) © 2026 Qingk
